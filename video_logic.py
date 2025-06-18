@@ -7,7 +7,7 @@ import os
 from moviepy.config import change_settings
 
 # Set the ImageMagick binary path
-change_settings({"IMAGEMAGICK_BINARY": r"C:\Program Files\ImageMagick-7.1.1-Q16-HDRI\magick.exe"})
+change_settings({"IMAGEMAGICK_BINARY": r"/usr/bin/convert"})
 
 def generate_video(caption: str, text1: str, text2: str, duration: int = 10) -> str:
     WIDTH, HEIGHT = 800, 600
