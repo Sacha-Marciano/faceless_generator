@@ -1,9 +1,13 @@
 To run in dev :
+create venv :
+python -m venv venv
 build env :
 source venv/Scripts/activate
 then:
 uvicorn main:app --reload
 
+install requirements:
+pip install -r requirements.txt
 freeze requirements:
 pip freeze > requirements.txt
 
