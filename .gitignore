@@ -1,0 +1,22 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+venv/
+.env
+
+# macOS / Windows system files
+.DS_Store
+Thumbs.db
+
+# Python environment files
+*.egg-info/
+
+# Output files
+output.mp4
+
+# IDEs
+.vscode/
+.idea/
