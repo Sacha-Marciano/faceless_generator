@@ -3,11 +3,10 @@ import moviepy.editor as mpy
 import os
 import random
 import math
-import os
 from moviepy.config import change_settings
 
 # Set the ImageMagick binary path
-change_settings({"IMAGEMAGICK_BINARY": r"/usr/bin/convert"})
+change_settings({"IMAGEMAGICK_BINARY": r"C:\Program Files\ImageMagick-7.1.1-Q16-HDRI\magick.exe"})
 
 def generate_video(caption: str, text1: str, text2: str, duration: int = 10) -> str:
     WIDTH, HEIGHT = 800, 600
@@ -108,8 +107,7 @@ def generate_video(caption: str, text1: str, text2: str, duration: int = 10) -> 
 
     filename = "output.mp4"
     video = mpy.ImageSequenceClip(frames, fps=FPS)
-    if caption:
-        txt_clip = mpy.TextClip(caption, fontsize=40, color='white').set_duration(3).set_position('center')
-        video = mpy.concatenate_videoclips([txt_clip.set_duration(2), video])
     video.write_videofile(filename, fps=FPS)
+
+    # Caption is kept but not used
     return filename
